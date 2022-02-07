@@ -1,3 +1,13 @@
+.root_box{
+  padding: 50px;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
 .github_search_input {
   display: block;
   width: 100%;
@@ -16,4 +26,54 @@
   list-style: none;
   margin: 0;
   padding: 1rem;
+  width: 900px;
 }
+
+.repo_item {
+  border: 1px solid;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  background: #cccccc;
+  display: flex;
+  align-items: center;
+}
+
+.description_block {
+  max-height: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.show_more_button {
+  margin-top: 10px;
+  padding: 10px 0;
+  text-align: center;
+  width: 900px;
+  border: 1px solid;
+  border-radius: 10px;
+  background: aquamarine;
+}
+
+.show_more_button:hover{
+  background: aqua;
+}
+
+.show_more_button_disabled {
+  width: 900px;
+  margin-top: 10px;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 10px;
+  background: aquamarine;
+  opacity: 50%;
+}
+
+.avatar_image {
+  border-radius: 20px;
+  width: 50px;
+  margin-right: 20px;
+}
+
