@@ -1,21 +1,12 @@
 import DOMAIN from '../consts/Domain';
 
-/**
- * Класс для взаимодействия с API.
- */
 class ApiCall {
-  /**
-   * Домен для обращения к API.
-   */
+
   domain: string;
 
   constructor(domain: string) {
     this.domain = domain;
   }
-
-  /**
-   * Приватный метод с каркасом для обращения.
-   */
 
   private async perform(
     url: string,

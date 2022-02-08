@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import ApiCall from "../api";
-import { repoProp } from "../interfaces";
+import { repoProp } from "../consts/interfaces";
 import TableRow from "./tableRow";
+import {CustomButton} from "./customButton";
 
 const ResultTable = ( ) =>{
     const [inputValue, setInputValue] = useState<string>("");
@@ -46,6 +47,7 @@ const ResultTable = ( ) =>{
 
     return(
         <div className="root_box">
+            {isLoading && <div className="loading">Loading...</div>}
             <form>
                 <input
                     type="text"
@@ -55,11 +57,10 @@ const ResultTable = ( ) =>{
                     onChange={setSearchValue}
                 />
             </form>
-            <div className={reposList.length !== 0? "show_more_button" : "show_more_button_disabled"} onClick={()=>fetchRepos(true)}>SHOW MORE</div>
-            {isLoading && <div>Loading...</div>}
+            <CustomButton limit={reposList.length} fetchRepos={fetchRepos}/>
             {error && (
                 <div style={{marginTop: '20px'}}>
-                    Количество запросов ограничено. Попробуйте позже!
+                    Ошибка сети. Попробуйте позже!
                 </div>
             )}
             <TableRow repos={reposList}/>

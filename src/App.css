@@ -6,6 +6,7 @@
   align-items: center;
   border: 1px solid;
   border-radius: 20px;
+  position: absolute;
 }
 
 .github_search_input {
@@ -78,5 +79,12 @@
   border-radius: 20px;
   width: 50px;
   margin-right: 20px;
+}
+
+.loading{
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  font-size: 25px;
 }
 

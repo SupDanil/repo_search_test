@@ -1,5 +1,5 @@
 import React from "react";
-import { repoProp } from "../interfaces";
+import { repoProp } from "../consts/interfaces";
 
 interface repoArrayProp {
     repos:Array<repoProp>

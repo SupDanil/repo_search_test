@@ -7,3 +7,8 @@ export interface repoProp {
         avatar_url: string
     }
 }
+
+export interface buttonProps{
+    limit: number
+    fetchRepos: (nextPage?:boolean|undefined) => Promise<void>
+}
